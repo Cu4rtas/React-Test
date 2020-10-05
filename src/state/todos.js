@@ -7,7 +7,7 @@ export default function todoReducer(state = [], action) {
 	switch (action.type) {
 		case SAVE_TODO:
 			newTodos = [ ...state, action.payload ];
-			return action.payload.name ? newTodos : state;
+			return action.payload.name !== '' ? newTodos : state;
 		case DELETE_TODO:
 			newTodos = [ ...state ];
 			return newTodos.filter((todo) => todo.id !== action.payload);

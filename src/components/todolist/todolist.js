@@ -23,7 +23,7 @@ const TodoList = () => {
 			})
 		);
 		if (position) {
-			if (position.lat && position.lng) {
+			if (position.lat && position.lng & (name !== '')) {
 				dispatch(
 					updateToDosLog({
 						id,

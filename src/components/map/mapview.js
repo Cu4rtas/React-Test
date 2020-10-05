@@ -9,7 +9,6 @@ import './mapview.css';
 const MapView = () => {
 	const position = useSelector((state) => state.app.position);
 	const todoslog = useSelector((state) => state.todoslog);
-
 	const defaultSettings = {
 		center: {
 			lat: position ? position.lat || 0 : 0,
@@ -25,16 +24,18 @@ const MapView = () => {
 				defaultZoom={defaultSettings.zoom}
 				yesIWantToUseGoogleMapApiInternals
 			>
-				{todoslog.map((log, i) => (
-					<MapMarker
-						lat={log.position.lat}
-						lng={log.position.lng}
-						action={log.action}
-						name={log.name}
-						from={log.from ? log.from : false}
-						key={uuid()}
-					/>
-				))}
+				{todoslog.map((log) => {
+					return (
+						<MapMarker
+							lat={log.position.lat}
+							lng={log.position.lng}
+							action={log.action}
+							name={log.name}
+							from={log.from || false}
+							key={uuid()}
+						/>
+					);
+				})}
 			</GoogleMapReact>
 		</Container>
 	);
