@@ -8,7 +8,6 @@ const MapMarker = ({ action, name, from }) => {
 				style={{
 					color: 'white',
 					background: action === 'done' ? '#38a169' : '#f6ad55',
-					// justifyContent: 'center',
 					borderRadius: '15px',
 					transform: 'translate(-38%, 0)'
 				}}
