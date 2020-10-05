@@ -1,0 +1,10 @@
+.m-view {
+    height: 60vh;
+    width: 100%
+}
+
+@media only screen and (max-height: 740px) {
+    .m-view {
+        height: 18rem;
+    }
+}

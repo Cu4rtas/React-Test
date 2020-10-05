@@ -1,0 +1,12 @@
+.t-list {
+    max-height: 50vh;
+    border-radius: 15px;
+}
+
+
+@media only screen and (max-height: 660px) {
+    .t-list {
+        height: 16rem;
+
+    }
+}
