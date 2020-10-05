@@ -6,7 +6,7 @@
 
 @media only screen and (max-height: 660px) {
     .t-list {
-        height: 16rem;
+        max-height: 16rem;
 
     }
 }
