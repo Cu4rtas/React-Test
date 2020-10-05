@@ -22,15 +22,17 @@ const TodoList = () => {
 				done: false
 			})
 		);
-		if (position.lat && position.lng) {
-			dispatch(
-				updateToDosLog({
-					id,
-					action: 'created',
-					position,
-					name
-				})
-			);
+		if (position) {
+			if (position.lat && position.lng) {
+				dispatch(
+					updateToDosLog({
+						id,
+						action: 'created',
+						position,
+						name
+					})
+				);
+			}
 		}
 		setName('');
 	};
