@@ -2,7 +2,7 @@ import React from 'react';
 import './marker.css';
 const MapMarker = ({ action, name, from }) => {
 	return (
-		<div className="marker" style={{ transform: 'translate(-50%, -50%)' }}>
+		<div style={{ transform: 'translate(-50%, -50%)' }} className="marker cursor-pointer">
 			<div
 				className="text-base font-medium py-0 px-2 w-40 text-center mb-0 marker-info"
 				style={{
@@ -42,7 +42,7 @@ const MapMarker = ({ action, name, from }) => {
 				fill="none"
 				viewBox="0 0 24 24"
 				stroke="currentColor"
-				className="h-10 w-10 text-orange-500 mt-0"
+				className="h-10 w-10 text-orange-500 mt-0 marker-icon"
 			>
 				<path
 					strokeLinecap="round"

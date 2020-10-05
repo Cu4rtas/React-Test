@@ -1,10 +1,16 @@
 .marker-info {
+    display: none;
     visibility: hidden;
 }
 
 .marker:hover .marker-info {
     animation: 0.5s fadeIn;
     animation-fill-mode: forwards;
+    display: block;
+}
+
+.marker:hover .marker-icon {
+    visibility: hidden;
 }
 
 @keyframes fadeIn {
