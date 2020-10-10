@@ -1,7 +1,11 @@
-require('dotenv').config({
-	path: `.env.development`
-});
+const activeEnv =
+	process.env.NODE_ENV || process.env.NODE_ENV || "development"
+console.log(`Using environment config: '${activeEnv}'`)
+require("dotenv").config({
+	path: `.env.${activeEnv}`,
+})
 module.exports = {
+	pathPrefix: "/React-Test",
 	siteMetadata: {
 		title: `React Test - To Do List`,
 		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
