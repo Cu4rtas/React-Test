@@ -1,15 +1,15 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { persistStore, persistReducer } from 'redux-persist';
+import rootReducer from '.';
 import storage from 'redux-persist/lib/storage';
 import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
 import { createStore as reduxCreateStore } from 'redux';
-import rootReducer from '.';
+import { persistStore, persistReducer } from 'redux-persist';
 
 const persistConfig = {
+	blacklist: ['position'],
 	key: 'root',
-	storage,
-	blacklist: [ 'position' ]
+	storage
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
