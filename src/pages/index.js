@@ -15,13 +15,13 @@ const ErrorAlert = ({ msg }) => {
 };
 
 const IndexPage = ({ dispatch }) => {
-	const [ mapTab, setMapTab ] = useState(false);
-	const [ msg, setMsg ] = useState('');
+	const [mapTab, setMapTab] = useState(false);
+	const [msg, setMsg] = useState('');
 
 	const getLocation = () => {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(
-				function(position) {
+				function (position) {
 					dispatch(
 						setPosition({
 							lat: position.coords.latitude,
@@ -30,7 +30,7 @@ const IndexPage = ({ dispatch }) => {
 					);
 					setMsg('');
 				},
-				function() {
+				function () {
 					setMsg('Geolocation is not enabled. Please enable to use the map feature');
 				}
 			);
@@ -44,7 +44,7 @@ const IndexPage = ({ dispatch }) => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			{msg ? <ErrorAlert msg={msg} /> : ''}
+			{msg && <ErrorAlert msg={msg} />}
 			<h1 className="text-4xl text-gray-800 underline font-medium">{`${!mapTab ? 'To Do List ...' : 'Map'}`}</h1>
 
 			{mapTab ? <MapView /> : <TodoList />}
