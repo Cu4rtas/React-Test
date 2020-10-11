@@ -1,25 +1,23 @@
 .marker-info {
-    display: none;
-    visibility: hidden;
+	visibility: hidden;
+	animation: 0.5s fadeIn;
+	animation-fill-mode: forwards;
 }
-
-.marker:hover .marker-info {
-    animation: 0.5s fadeIn;
-    animation-fill-mode: forwards;
-    display: block;
-}
-
-.marker:hover .marker-icon {
-    visibility: hidden;
+.marker-icon {
+	visibility: hidden;
+	animation: 0.5s fadeIn;
+	animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+		display: block;
+	}
 
-    100% {
-        visibility: visible;
-        opacity: 1;
-    }
+	100% {
+		visibility: visible;
+		opacity: 1;
+		cursor: pointer;
+	}
 }
