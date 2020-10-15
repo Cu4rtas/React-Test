@@ -11,8 +11,8 @@ const MapView = () => {
 	const todoslog = useSelector((state) => state.todoslog);
 	const defaultSettings = {
 		center: {
-			lat: position ? position.lat || 0 : 0,
-			lng: position ? position.lng || 0 : 0
+			lat: position.lat,
+			lng: position.lng
 		},
 		zoom: 15
 	};

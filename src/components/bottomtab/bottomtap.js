@@ -1,8 +1,10 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import { useSelector } from 'react-redux'
 import './bottomtap.css';
 
 const BottomTab = ({ handleTabChange, mapTab }) => {
+	const position = useSelector(state => state.app.position);
 	return (
 		<Navbar bg="white" fixed="bottom" className="flex p-0 mt-4">
 			<button
@@ -30,7 +32,8 @@ const BottomTab = ({ handleTabChange, mapTab }) => {
 				</div>
 			</button>
 			<button
-				className={`p-2 flex-fill cursor-pointer ${mapTab ? 'tab-nav-selected' : 'tab-nav'}`}
+				disabled={position ? false : true}
+				className={mapTab ? 'p-2 flex-fill cursor-pointer tab-nav-selected' : 'p-2 flex-fill cursor-pointer tab-nav'}
 				onClick={() => handleTabChange(true)}
 			>
 				<div className="flex justify-center">

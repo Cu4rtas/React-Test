@@ -45,7 +45,7 @@ const IndexPage = ({ dispatch }) => {
 		<Layout>
 			<SEO title="Home" />
 			{msg && <ErrorAlert msg={msg} />}
-			<h1 className="text-4xl text-gray-800 underline font-medium">{`${!mapTab ? 'To Do List ...' : 'Map'}`}</h1>
+			<h1 className="text-4xl text-gray-800 underline font-medium">{`${mapTab ? 'Map' : 'To Do List ...'}`}</h1>
 
 			{mapTab ? <MapView /> : <TodoList />}
 			<BottomTab handleTabChange={setMapTab} mapTab={mapTab} />

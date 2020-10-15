@@ -44,9 +44,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gatsbyjs/gatsby-starter-default"
+		"url": "https://github.com/Cu4rtas/React-Test.git"
 	},
 	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
+		"url": "https://github.com/Cu4rtas/React-Test/issues"
 	}
 }
